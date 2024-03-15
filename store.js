@@ -165,6 +165,7 @@ function submitPurchaseToGoogleSheets(productName, price, phone, name, location)
    for (const key in payload) {
        formData.append(key, payload[key]);
    }
+
    const xhr = new XMLHttpRequest();
    xhr.open('POST', scriptUrl);
    xhr.onload = function () {

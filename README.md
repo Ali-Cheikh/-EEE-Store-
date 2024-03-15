@@ -12,7 +12,11 @@ This is a simple web store for purchasing artworks created by Elae Draws. The st
   <img src="img/logo.png" alt="Logo">
 </p>
 <p align="center">
-  <img src="https://img.shields.io/badge/Website-Preview-blue?style=for-the-badge&logo=google-chrome&logoColor=white" alt="Website Preview">
+  <a href="https://ElaeStore.netlify.app/">
+    <img src="https://img.shields.io/badge/Website-Preview-blue?style=for-the-badge&logo=google-chrome&logoColor=white" alt="Website Preview">
+  </a>
+
+  [![Netlify Status](https://api.netlify.com/api/v1/badges/5464422b-c363-47d4-956e-09cb52c02512/deploy-status)](https://app.netlify.com/sites/elaestore/deploys)
 </p>
 
 ## Technologies Used

@@ -1,7 +1,7 @@
 # Elae Draws SHOP ✨
 
 <p align="center">
-  <img src="img/store-logo.png" alt="Store Logo">
+  <img src="img/store-logo.jpg" alt="Store Logo">
 </p>
 
 This is a simple web store for purchasing artworks created by Me. The store showcases various products with images and descriptions and allows users to make purchases.
@@ -9,7 +9,7 @@ This is a simple web store for purchasing artworks created by Me. The store show
 ## Website Preview
 
 <p align="center">
-  <img src="img/logo.png" alt="Logo">
+  <img src="img/logo.jpg" alt="Logo">
 </p>
 <p align="center">
   <a href="https://ElaeStore.netlify.app/">

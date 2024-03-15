@@ -169,7 +169,7 @@ function submitPurchaseToGoogleSheets(productName, price, phone, name, location)
            Swal.fire({
            title: 'Demand Reached',
            text: "Your purchase was successful. we'll contact you soon",
-           imageUrl: '/img/logo.png',
+           imageUrl: '/img/logo.jpg',
            imageAlt: 'Custom Success Icon',
            confirmButtonText: 'Yeyy 🥳',
            confirmButtonColor: "dark-pink",

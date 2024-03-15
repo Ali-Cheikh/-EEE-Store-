@@ -1,6 +1,7 @@
 const products = [
     { name: 'product 1', price: 20, image: '/product/img.png', intro: 'product description' },
     { name: 'product 2', price: 15, image: '/product/img.png', intro: 'product description' },
+    { name: 'product 3', price: 150, image: '/product/img.png', intro: 'product description' },
 ];
 
 displayProducts();
@@ -10,10 +11,10 @@ function displayProducts() {
     productListDiv.innerHTML = '';
 
     products.forEach(product => {
+        // replace product img later with ${product.name}
         const productCard = `
             <div class="col-lg-4 col-md-6 mb-4">
                 <div class="card">
-                // replace product img later with ${product.name}
                     <img src="${product.image}" class="card-img-top" alt="product img ">
                     <div class="card-body">
                         <h5 class="card-title">${product.name}</h5>

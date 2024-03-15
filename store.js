@@ -1,11 +1,6 @@
 const products = [
-    { name: 'Calcifer Keychain', price: 25, image: '/product/calciferKeychain.png', intro: 'Handmade keychain for Ghibli studio lovers!' },
-    { name: 'Cooking Calcifer Keychain', price: 25, image: '/product/cookingCalciferKeychain.png', intro: 'Handmade keychain for Ghibli studio lovers!' },
-    { name: 'Aria Keychain', price: 15, image: '/product/AriaKeychain.png', intro: 'Plexiglass printed keychain!' },
-    { name: 'Witches Sticker Sheet', price: 15, image: '/product/witchesStickerSheet.png', intro: 'A5 stickers of the coolest magic tricks!' },
-    { name: 'Witch Keychain', price: 15, image: '/product/witchKeychain.jpg', intro: 'Plexiglass printed keychain!' },
-    { name: 'Aria Sticker Sheet', price: 10, image: '/product/elae_draws_designs_.png', intro: 'A5 stickers of the softest angel!' },
-    { name: 'Howl Sticker Sheet', price: 10, image: '/product/howl_stickers.jpg', intro: 'A5 stickers of your favorate movie!' },
+    { name: 'product 1', price: 20, image: '/product/img.png', intro: 'product description' },
+    { name: 'product 2', price: 15, image: '/product/img.png', intro: 'product description' },
 ];
 
 displayProducts();
@@ -18,11 +13,12 @@ function displayProducts() {
         const productCard = `
             <div class="col-lg-4 col-md-6 mb-4">
                 <div class="card">
-                    <img src="${product.image}" class="card-img-top" alt="${product.name}">
+                // replace product img later with ${product.name}
+                    <img src="${product.image}" class="card-img-top" alt="product img ">
                     <div class="card-body">
                         <h5 class="card-title">${product.name}</h5>
                         <q>${product.intro}</q><br><hr>
-                        <p class="card-text" style="float:right">Price: ${product.price}.<small>00</small>TND</p>
+                        <p class="card-text">Price: ${product.price}.<small>00</small>TND</p>
                         <button class="btn btn-primary" onclick="buyProduct('${product.name}', ${product.price})">Buy</button>
                     </div>
                 </div>

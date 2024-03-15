@@ -4,7 +4,7 @@
   <img src="img/store-logo.png" alt="Store Logo">
 </p>
 
-This is a simple web store for purchasing artworks created by Elae Draws. The store showcases various products with images and descriptions and allows users to make purchases.
+This is a simple web store for purchasing artworks created by Me. The store showcases various products with images and descriptions and allows users to make purchases.
 
 ## Website Preview
 
@@ -14,9 +14,10 @@ This is a simple web store for purchasing artworks created by Elae Draws. The st
 <p align="center">
   <a href="https://ElaeStore.netlify.app/">
     <img src="https://img.shields.io/badge/Website-Preview-blue?style=for-the-badge&logo=google-chrome&logoColor=white" alt="Website Preview">
+  </a><br>
+    <a href="https://app.netlify.com/sites/eeestore/deploys">
+    <img src="https://api.netlify.com/api/v1/badges/76984ce2-a236-4940-bc08-51a7b08a7fec/deploy-status" alt="Website status">
   </a>
-
-  [![Netlify Status](https://api.netlify.com/api/v1/badges/5464422b-c363-47d4-956e-09cb52c02512/deploy-status)](https://app.netlify.com/sites/elaestore/deploys)
 </p>
 
 ## Technologies Used
@@ -52,7 +53,7 @@ To run this project locally:
 
 ## Usage
 
-Simply open the `index.html` file in your web browser to explore and purchase artworks from Elae Draws.
+Simply open the `index.html` file in your web browser to explore and purchase artworks from eee-store.
 
 ## License
 
@@ -60,4 +61,4 @@ This project is licensed under the terms of the MIT license. See the [LICENSE](L
 
 ---
 
-© 2024 Elae Draws. All rights reserved.
+© 2024 Ali Cheikh. All rights reserved.

@@ -57,7 +57,7 @@ Simply open the `index.html` file in your web browser to explore and purchase ar
 
 ## License
 
-This project is licensed under the terms of the MIT license. See the [LICENSE](LICENSE) file for details.
+This project is licensed under the terms of the MIT license. See the [LICENSE](LICENSE.md) file for details.
 
 ---
 

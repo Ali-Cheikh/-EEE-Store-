@@ -65,7 +65,7 @@ function buyProduct(productName, price) {
                     Swal.fire({
                         title: 'Enter Your Name',
                         input: 'text',
-                        inputPlaceholder: 'Name',
+                        inputPlaceholder: 'Full Name',
                         confirmButtonText: 'Next',
                         confirmButtonColor: "#FC3882",
                         showProgressBar: true,

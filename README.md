@@ -46,7 +46,7 @@ To run this project locally:
 
 ## Features
 
-- Display of various artworks for sale.
+- Display of various Products for sale.
   - Example:<br>
   ![Example](img/t.png)
 - Purchase functionality with confirmation dialogs.

@@ -53,6 +53,17 @@ To run this project locally:
 
 ## Usage
 
+To contribute to this project, follow these steps:
+
+1. Fork the repository.
+2. Clone the forked repository to your local machine.
+3. Make changes and create a new branch.
+4. Push your changes to the branch in your fork.
+5. Open a pull request to the main branch of the original repository.
+
+Upon opening a pull request, GitHub Actions will automatically run the CI workflow, testing your changes against multiple versions of Node.js. Ensure that all tests pass before merging your changes.
+
+
 Simply open the `index.html` file in your web browser to explore and purchase artworks from eee-store.
 
 ## License

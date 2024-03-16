@@ -46,17 +46,18 @@ To run this project locally:
 
 ## Features
 
-- Display of various artworks for sale.
-  - Example:
-  ![Example](t.png)
+- Display of various Products for sale.
+  - Example:<br>
+  ![Example](img/t.png)
 - Purchase functionality with confirmation dialogs.
 - Collection of customer information (name, phone number, city) for order processing.
-  - Data submitting :
-  ![Example](ttt.png)
+  - Data submitting :<br>
+  ![Example](img/ttt.png)
 - Backend processing using Google Apps Script to submit purchase details to Google Sheets.
-  - Storage view :
-  ![Example](tt.png)
+  - Storage view :<br>
+  ![Example](img/tt.png)
 - Responsive design for various screen sizes.
+  - All screens thanks to bootstrap 
 
 ## Usage
 

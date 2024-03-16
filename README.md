@@ -57,6 +57,7 @@ To run this project locally:
   - Storage view :
   ![Example](tt.png)
 - Responsive design for various screen sizes.
+  - All screens thanks to bootstrap 
 
 ## Usage
 

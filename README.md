@@ -46,8 +46,11 @@ To run this project locally:
 ## Features
 
 - Display of various artworks for sale.
+  -![Example](image-1.png)
 - Purchase functionality with confirmation dialogs.
 - Collection of customer information (name, phone number, city) for order processing.
+  - storage view
+  ![Example](image.png)
 - Backend processing using Google Apps Script to submit purchase details to Google Sheets.
 - Responsive design for various screen sizes.
 

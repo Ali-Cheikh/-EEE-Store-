@@ -1,7 +1,8 @@
 # EEE Store ✨
 
 <p align="center">
-  <img src="img/store-logo.png" alt="Store Logo" width="50%">
+  <a href="https://ElaeStore.netlify.app/">
+  <img src="img/store-logo.png" alt="Store Logo" width="50%"></a>
 </p>
 
 This is a simple web store for purchasing artworks created by Me. The store showcases various products with images and descriptions and allows users to make purchases.

@@ -41,108 +41,110 @@ function buyProduct(productName, price) {
     }).then((result) => {
         if (result.isConfirmed) {
             Swal.fire({
-                title: 'Enter Your Phone Number',
-                input: 'tel',
-                inputPlaceholder: 'Phone Number',
+                title: 'Enter Your Name',
+                input: 'text',
+                inputPlaceholder: 'Full Name',
                 confirmButtonText: 'Next',
                 confirmButtonColor: "#FC3882",
                 showProgressBar: true,
                 inputValidator: (value) => {
                     if (!value) {
-                        return 'Please enter your phone number';
+                        return 'Please enter your name';
                     }
-                    const phoneRegex = /^\d{8}$/;
-                    if (!phoneRegex.test(value)) {
-                        return 'Invalid phone number';
-                    }
-                }
-            })
-        .then((count) => {
-        if (count.isConfirmed) {
-            Swal.fire({
-                title: 'How Many ?',
-                input: 'number',
-                inputPlaceholder: '1?/ 2?/ 100?',
-                confirmButtonText: 'Next',
-                confirmButtonColor: "#FC3882",
-                showProgressBar: true,
-                inputValidator: (value) => {
-                    if (!value) {
-                        return 'Please enter a Number';
-                    }
-                    const phoneRegex = /^\[1-10]{8}$/;
-                    if (!phoneRegex.test(value)) {
-                        return 'porches between 1 and 10 per product';
+                    const nameRegex = /^[a-zA-Z\s]*$/;
+                    if (!nameRegex.test(value)) {
+                        return 'Invalid Name';
                     }
                 }
-            }).then((phoneResult) => {
-                if (phoneResult.isConfirmed) {
-                    const phone = phoneResult.value;
+            }).then((nameResult) => {
+                if (nameResult.isConfirmed) {
+                    const name = nameResult.value;
                     Swal.fire({
-                        title: 'Enter Your Name',
+                        title: 'How Many ?',
                         input: 'text',
-                        inputPlaceholder: 'Full Name',
+                        inputPlaceholder: '1 => 10',
                         confirmButtonText: 'Next',
                         confirmButtonColor: "#FC3882",
                         showProgressBar: true,
                         inputValidator: (value) => {
                             if (!value) {
-                                return 'Please enter your name';
+                                return 'Please enter a Number';
                             }
-                            const nameRegex = /^[a-zA-Z\s]*$/;
-                            if (!nameRegex.test(value)) {
-                                return 'Invalid Name';
+                            const count = parseInt(value);
+                            if (isNaN(count) || count < 1 || count > 10) {
+                                return 'Enter a number between 1 and 10';
                             }
                         }
-                    }).then((nameResult) => {
-                        if (nameResult.isConfirmed) {
-                            const name = nameResult.value;
-                            const cityOptions = {
-                                Tunis: "Tunis",
-                                Sfax: "Sfax",
-                                Sousse: "Sousse",
-                                Kairouan: "Kairouan",
-                                Bizerte: "Bizerte",
-                                Gabes: "Gabes",
-                                Ariana: "Ariana",
-                                Gafsa: "Gafsa",
-                                Monastir: "Monastir",
-                                Manouba: "Manouba",
-                                'Ben Arous': "Ben Arous",
-                                Kasserine: "Kasserine",
-                                Medenine: "Medenine",
-                                Mahdia: "Mahdia",
-                                Zaghouan: "Zaghouan",
-                                Beja: "Beja",
-                                Jendouba: "Jendouba",
-                                Nabeul: "Nabeul",
-                                Kebili: "Kebili",
-                                Siliana: "Siliana",
-                                Tataouine: "Tataouine",
-                                Tozeur: "Tozeur",
-                                Kef: "Kef",
-                                Kasserine: "Kasserine"
-                            };
-
+                    }).then((countResult) => {
+                        if (countResult.isConfirmed) {
+                            const count = parseInt(countResult.value);
                             Swal.fire({
-                                title: 'Select Your City',
-                                input: 'select',
-                                inputOptions: cityOptions,
-                                inputPlaceholder: 'Select your city',
-                                text:'then buy',
-                                confirmButtonText: 'Buy 💰',
-                                confirmButtonColor: "#F4f499",
-                                showCancelButton: false,
+                                title: 'Enter Your Phone Number',
+                                input: 'tel',
+                                inputPlaceholder: 'Phone Number',
+                                confirmButtonText: 'Next',
+                                confirmButtonColor: "#FC3882",
                                 showProgressBar: true,
                                 inputValidator: (value) => {
                                     if (!value) {
-                                        return 'Please select your city';
+                                        return 'Please enter your phone number';
+                                    }
+                                    const phoneRegex = /^\d{8}$/;
+                                    if (!phoneRegex.test(value)) {
+                                        return 'Invalid Phone Number';
                                     }
                                 }
-                            }).then((locationResult) => {
-                                if (locationResult.isConfirmed) {
-                                    const location = locationResult.value;
-                                    submitPurchaseToGoogleSheets(productName, price, count, phone, name, location);
+                            }).then((phoneResult) => {
+                                if (phoneResult.isConfirmed) {
+                                    const phone = phoneResult.value;
+                                    const cityOptions = {
+                                        Tunis: "Tunis",
+                                        Sfax: "Sfax",
+                                        Sousse: "Sousse",
+                                        Kairouan: "Kairouan",
+                                        Bizerte: "Bizerte",
+                                        Gabes: "Gabes",
+                                        Ariana: "Ariana",
+                                        Gafsa: "Gafsa",
+                                        Monastir: "Monastir",
+                                        Manouba: "Manouba",
+                                        'Ben Arous': "Ben Arous",
+                                        Kasserine: "Kasserine",
+                                        Medenine: "Medenine",
+                                        Mahdia: "Mahdia",
+                                        Zaghouan: "Zaghouan",
+                                        Beja: "Beja",
+                                        Jendouba: "Jendouba",
+                                        Nabeul: "Nabeul",
+                                        Kebili: "Kebili",
+                                        Siliana: "Siliana",
+                                        Tataouine: "Tataouine",
+                                        Tozeur: "Tozeur",
+                                        Kef: "Kef",
+                                        Kasserine: "Kasserine"
+                                    };
+
+                                    Swal.fire({
+                                        title: 'Select Your City',
+                                        input: 'select',
+                                        inputOptions: cityOptions,
+                                        inputPlaceholder: 'Select your city',
+                                        text: 'then buy',
+                                        confirmButtonText: 'Buy 💰',
+                                        confirmButtonColor: "#F4f499",
+                                        showCancelButton: false,
+                                        showProgressBar: true,
+                                        inputValidator: (value) => {
+                                            if (!value) {
+                                                return 'Please select your city';
+                                            }
+                                        }
+                                    }).then((locationResult) => {
+                                        if (locationResult.isConfirmed) {
+                                            const location = locationResult.value;
+                                            submitPurchaseToGoogleSheets(productName, price, count, phone, name, location);
+                                        }
+                                    });
                                 }
                             });
                         }
@@ -153,62 +155,62 @@ function buyProduct(productName, price) {
     });
 }
 
-
 function submitPurchaseToGoogleSheets(productName, price, count, phone, name, location) {
-
     Swal.fire({
-       title: 'Sending...',
-       titleColor:'red',
-       text: 'Please wait while your purchase is being processed.',
-       icon: 'info',
-       allowOutsideClick: false,
-       showConfirmButton: false,
-       willOpen: () => {
-           Swal.showLoading();
-       }
-   });
-   const scriptUrl = 'https://script.google.com/macros/s/AKfycbzmoqbZ5ziKRxXWofBJkBj6eJJKxJjT5a6BKGcxIsPOVBfbHf-uAe0bGz1wpmdKTZtv/exec';
+        title: 'Sending...',
+        titleColor: 'red',
+        text: 'Please wait while your purchase is being processed.',
+        icon: 'info',
+        allowOutsideClick: false,
+        showConfirmButton: false,
+        willOpen: () => {
+            Swal.showLoading();
+        }
+    });
 
-   const payload = {
-       productName: productName,
-       price: price,
-       phone: phone,
-       name: name,
-       location: location
-   };
+    const scriptUrl = 'https://script.google.com/macros/s/AKfycbzDxzpDGle23jwRTaF_KbYLUBCkIy9jjPW_WU05k0BqCalZLFSMS8EkzH8BwLYGKyTE/exec';
 
-   const formData = new FormData();
-   for (const key in payload) {
-       formData.append(key, payload[key]);
-   }
+    const payload = {
+        productName: productName,
+        price: price,
+        count: count,
+        phone: phone,
+        name: name,
+        location: location
+    };
 
-   const xhr = new XMLHttpRequest();
-   xhr.open('POST', scriptUrl);
-   xhr.onload = function () {
-       if (xhr.status === 200) {
-           Swal.fire({
-           title: 'Demand Reached',
-           text: "Your purchase was successful. we'll contact you soon",
-           imageUrl: '/img/logo.jpg',
-           imageAlt: 'Custom Success Icon',
-           confirmButtonText: 'Yeyy 🥳',
-           confirmButtonColor: "dark-pink",
-           icon: null
-       });
-       } else {
-           Swal.fire({
-               title: 'Error!',
-               text: 'An error occurred while processing your purchase. Please try again later.',
-               icon: 'error'
-           });
-       }
-   };
-   xhr.onerror = function () {
-       Swal.fire({
-           title: 'Error!',
-           text: 'An error occurred while processing your purchase. Please try again later.',
-           icon: 'error'
-       });
-   };
-   xhr.send(formData);
+    const formData = new FormData();
+    for (const key in payload) {
+        formData.append(key, payload[key]);
+    }
+
+    const xhr = new XMLHttpRequest();
+    xhr.open('POST', scriptUrl);
+    xhr.onload = function () {
+        if (xhr.status === 200) {
+            Swal.fire({
+                title: 'Demand Reached',
+                text: "Your purchase was successful. we'll contact you soon",
+                imageUrl: '/img/logo.jpg',
+                imageAlt: 'Custom Success Icon',
+                confirmButtonText: 'Yeyy 🥳',
+                confirmButtonColor: "dark-pink",
+                icon: null
+            });
+        } else {
+            Swal.fire({
+                title: 'Error!',
+                text: 'An error occurred while processing your purchase. Please try again later.',
+                icon: 'error'
+            });
+        }
+    };
+    xhr.onerror = function () {
+        Swal.fire({
+            title: 'Error!',
+            text: 'An error occurred while processing your purchase. Please try again later.',
+            icon: 'error'
+        });
+    };
+    xhr.send(formData);
 }

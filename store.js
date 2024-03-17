@@ -56,6 +56,25 @@ function buyProduct(productName, price) {
                         return 'Invalid phone number';
                     }
                 }
+            })
+        .then((count) => {
+        if (count.isConfirmed) {
+            Swal.fire({
+                title: 'How Many ?',
+                input: 'number',
+                inputPlaceholder: '1?/ 2?/ 100?',
+                confirmButtonText: 'Next',
+                confirmButtonColor: "#FC3882",
+                showProgressBar: true,
+                inputValidator: (value) => {
+                    if (!value) {
+                        return 'Please enter a Number';
+                    }
+                    const phoneRegex = /^\[1-10]{8}$/;
+                    if (!phoneRegex.test(value)) {
+                        return 'porches between 1 and 10 per product';
+                    }
+                }
             }).then((phoneResult) => {
                 if (phoneResult.isConfirmed) {
                     const phone = phoneResult.value;
@@ -123,7 +142,7 @@ function buyProduct(productName, price) {
                             }).then((locationResult) => {
                                 if (locationResult.isConfirmed) {
                                     const location = locationResult.value;
-                                    submitPurchaseToGoogleSheets(productName, price, phone, name, location);
+                                    submitPurchaseToGoogleSheets(productName, price, count, phone, name, location);
                                 }
                             });
                         }
@@ -135,7 +154,7 @@ function buyProduct(productName, price) {
 }
 
 
-function submitPurchaseToGoogleSheets(productName, price, phone, name, location) {
+function submitPurchaseToGoogleSheets(productName, price, count, phone, name, location) {
 
     Swal.fire({
        title: 'Sending...',

@@ -167,8 +167,8 @@ function submitPurchaseToGoogleSheets(productName, price, count, phone, name, lo
             Swal.showLoading();
         }
     });
-    https://script.google.com/macros/s/AKfycbzz6FTDNRMLv0_U8tuhDzP5TloXU8p5EmE3isFZCzDRH35K-oLgbySsPLLpicXmSaks/exec
-    const scriptUrl = '';
+
+    const scriptUrl = 'https://script.google.com/macros/s/AKfycbzDxzpDGle23jwRTaF_KbYLUBCkIy9jjPW_WU05k0BqCalZLFSMS8EkzH8BwLYGKyTE/exec';
 
     const payload = {
         productName: productName,
